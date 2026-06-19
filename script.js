@@ -15,15 +15,15 @@ else if (operator === "*") {
     console.log(a * b);
 }
 else if (operator === "/") {
-if(b !== 0){
+    if (b !== 0) {
         console.log(a / b);
 
-}
-else{
-    console.log("b cannot be zero");
-    
-}
-    
+    }
+    else {
+        console.log("b cannot be zero");
+
+    }
+
 }
 else if (operator === "%") {
     console.log(a % b);
@@ -36,25 +36,23 @@ else {
 
 //Stutent mark 
 
-let mark = 88;
+let marks = 88;
 let bonus = 5;
 
-mark += bonus;
-
-console.log(mark);
+marks += bonus;
 
 
 let grade;
 
-if(mark>90){
+if (marks >= 90) {
     grade = "Grade A";
-    
-}
-else if(mark>=70 && mark <= 89){
-   grade = "Grade B";
 
 }
-else if(mark>=50 && mark <=69){
+else if (marks >= 70) {
+    grade = "Grade B";
+
+}
+else if (marks >= 50) {
     grade = "Grade C";
 
 }
@@ -67,22 +65,28 @@ console.log(grade);
 
 
 
-let status = mark >= 50 ? "Pass" : "Fail";
-console.log(status);
+let result = marks >= 50 ? "Pass" : "Fail";
+
+let remark;
 
 
-
-switch(grade){
-    case "Grade A" :
-        console.log("Excellent !");
+switch (grade) {
+    case "Grade A":
+        remark = "Excellent !";
         break;
-    case "Grade B" :
-        console.log("Good");
+    case "Grade B":
+        remark = "Good";
         break;
-    case "Grade C" :
-        console.log("Average");
-        break; 
-    default :
-     console.log("Needs Improvement");
+    case "Grade C":
+        remark = "Average";
+        break;
+    default:
+        remark = "Needs Improvement";
 
 }
+
+console.log("Marks :", marks);
+console.log("Grade :", grade);
+console.log("Result :", result);
+console.log("Remark: ", remark);
+
